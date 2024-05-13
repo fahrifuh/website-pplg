@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Register</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="log-reg-screen">
+      <div class="loginster">
+        <div id="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">
+            Login
+          </button>
+          <button type="button" class="toggle-btn" onclick="register()">
+            <p>Register</p>
+          </button>
+        </div>
+        <div id="picture">
+          <img src="images/login.png" alt="login/register-picture" />
+        </div>
+        <div id="login" class="input-group">
+          <h2>Login</h2>
+          <hr class="special-hr" />
+          <div class="content">
+            <form action="">
+              <input
+                type="email"
+                class="input-field"
+                name="email"
+                placeholder="Mail Address"
+                requared
+              />
+              <input
+                type="password"
+                class="input-field"
+                class="input-field"
+                name="password"
+                placeholder="Enter Password"
+                requared
+              />
+              <input type="checkbox" class="check-box" name="checkbox" />
+              <label for="checkbox">Remember Password</label>
+              <button type="submit" class="submit-btn">Login</button>
+            </form>
+          </div>
+        </div>
+        <div id="register" class="input-group">
+          <h2>Register</h2>
+          <hr class="special-hr" />
+          <div class="content">
+            <form action="">
+              <input
+                type="text"
+                class="input-field"
+                name="name and surname"
+                placeholder="Username"
+                requared
+              />
+              <input
+                type="email"
+                class="input-field"
+                name="email"
+                placeholder="Mail Address"
+                required
+              />
+              <input
+                type="password"
+                class="input-field"
+                name="password"
+                placeholder="Enter Password"
+                requared
+              />
+              <input
+                type="checkbox"
+                class="check-box"
+                name="checkbox"
+                required
+              />
+              <label for="checkbox"
+                >I agree with the terms and conditions.</label
+              >
+              <button type="submit" class="submit-btn">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

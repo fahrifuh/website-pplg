@@ -1,0 +1,498 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#home-page {
+  height: 88vh;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(50% 50% at 50% 50%, #6f9cf2 0%, #f2f5fb 100%);
+}
+
+/* header {
+  background-color: #009dff;
+} */
+
+.nav-menu li {
+  list-style: none;
+}
+
+.nav-menu a {
+  color: black;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 1%;
+}
+
+.topleft {
+  display: flex;
+  cursor: pointer;
+}
+
+.topleft img {
+  margin-block: 10px;
+  margin-inline: 10px;
+}
+
+.nav-link {
+  transition: 0.5s ease;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.nav-link:hover {
+  color: rgb(255, 221, 0);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(0, 0, 0);
+}
+
+#judul {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+}
+
+/* HomePage */
+.bg-img {
+  max-width: 100%;
+  height: 88vh;
+  background-image: url(images/homePage.jpg);
+  background-size: cover;
+  filter: opacity(55%);
+}
+
+.con-judul {
+  position: absolute;
+  left: 60%;
+  right: 2%;
+  bottom: 60%;
+  top: 45%;
+}
+
+.con-judul p:nth-child(1) {
+  font-size: 250%;
+  font-weight: 500;
+  text-align: right;
+}
+
+.con-judul p:nth-child(2) {
+  font-size: 125%;
+  font-weight: 400;
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .con-judul {
+    left: auto;
+    top: 50%;
+    width: 100%;
+    right: 2%;
+    color: #000000;
+  }
+  .bg-img {
+    width: auto;
+  }
+}
+/* End of HomePage */
+
+/* MainPage */
+.con-main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 22%;
+  height: 450px;
+  background: linear-gradient(to top, #5b81e5 0%, #ffffff 45%);
+  /* margin: 15px; */
+  margin-top: 8%;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+.ilustrasi {
+  height: 210px;
+  margin-bottom: 1.5%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-us {
+  background-image: url(images/about-us.png);
+}
+.gallery {
+  background-image: url(images/gallery.png);
+}
+.portfolio {
+  background-image: url(images/portfolio.png);
+}
+.teachers {
+  background-image: url(images/teachers.png);
+}
+
+.judul-desk {
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+.deskripsi {
+  text-align: left;
+  font-weight: 500;
+  font-size: 90%;
+  letter-spacing: 0.2px;
+  padding-bottom: 40px;
+}
+
+.card a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+  display: block;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  background: linear-gradient(to left, #86aaf1 0%, #f1f4fa 66%);
+  font-weight: 500;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.card a,
+.deskripsi,
+.judul-desk {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  #main-page {
+    height: fit-content;
+  }
+
+  .con-main {
+    flex-direction: column;
+  }
+  .card {
+    width: 90%;
+    height: 425px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-block: 10%;
+  }
+  .deskripsi {
+    font-size: 125%;
+  }
+  .card a {
+    font-size: 110%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .deskripsi {
+    font-size: 100%;
+  }
+  .card a {
+    font-size: 90%;
+  }
+}
+/* End of MainPage */
+
+/* About Us Page */
+.hidden-content {
+  display: none;
+}
+
+.con-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-about {
+  background: linear-gradient(180deg, #fff 41.83%, #5b81e5 160.61%);
+  border: 2px solid;
+  margin-inline: 5%;
+  border-radius: 15px;
+  padding-top: 3%;
+  padding-inline: 2%;
+  margin-top: 7%;
+  margin-bottom: 3%;
+}
+
+.aboutus-header {
+  font-size: 250%;
+  font-weight: bold;
+}
+
+.aboutus-title {
+  font-size: 200%;
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+
+.card-about button {
+  background-color: #6f9cf2;
+  border: none;
+  border-radius: 27px;
+  font-size: 1.2rem;
+  padding: 11px;
+  margin-block: 3%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #about-page {
+    height: fit-content;
+  }
+  .aboutus-header {
+    font-size: 200%;
+  }
+  .aboutus-title {
+    font-size: 150%;
+  }
+  .aboutus-desc {
+    font-size: 90%;
+  }
+}
+/* End of About Us Page */
+
+/* Gallery Page */
+#gallery-page {
+  padding: 1%;
+}
+
+#gallery-page h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#gallery-page h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 25%;
+  color: whitesmoke;
+  font-size: 120%;
+  text-shadow: 0 4px 4px #ccc;
+}
+
+.con-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+  gap: 20px;
+}
+
+.image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+}
+
+.image:nth-of-type(1) {
+  background-image: url(images/kunjin-1.jpg);
+  background-position: center bottom;
+}
+
+.image:nth-of-type(2) {
+  background-image: url(images/kujin-2.jpg);
+}
+
+.image:nth-of-type(3) {
+  background-image: url(images/XI-PPLG-2.jpg);
+}
+
+.image:nth-of-type(4) {
+  background-image: url(images/X-PPLG-1.jpg);
+}
+
+.image:nth-of-type(5) {
+  background-image: url(images/X-PPlG-2.jpg);
+}
+
+.image:nth-of-type(6) {
+  background-image: url(images/Kunjin-3.jpg);
+}
+
+.image:nth-of-type(7) {
+  background-image: url(images/Kumpul_Perdana.jpg);
+}
+
+.image:nth-of-type(8) {
+  background-image: url(images/TKI.JPG);
+}
+
+.image:nth-of-type(9) {
+  background-image: url(images/XI-PPLG-1.jpg);
+}
+
+@media screen and (max-width: 768px) {
+  #gallery-page {
+    height: fit-content;
+  }
+
+  .image {
+    margin-inline: 3%;
+  }
+
+  .image:nth-of-type(1) {
+    background-position: 0 80%;
+  }
+
+  .image:nth-of-type(3) {
+    background-position: 0 80%;
+  }
+
+  .image:nth-of-type(4) {
+    background-position: 0 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .con-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .con-gallery .image {
+    background-position: center !important;
+  }
+}
+/* End of Gallery Page */
+
+/* Portfolio Page */
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 2%;
+}
+
+.con-portfolio {
+  display: flex;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+.column-portfolio {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 450px;
+  margin: 20px;
+}
+
+.card-portfolio {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(to bottom, #ffffff 41.83%, #5b81e5 160.61%);
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.judul-desk-port,
+.desk-port {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .con-portfolio {
+    display: block;
+  }
+
+  .column-portfolio {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* End of Portfolio */
