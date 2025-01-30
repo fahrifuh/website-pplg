@@ -30,3 +30,17 @@ readMoreButton.addEventListener("click", () => {
     document.getElementById("about-page").setAttribute("style", "height:100vh");
   }
 });
+
+//daftarkan service worker
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/service-worker.js").then(
+      function (registration) {
+        console.log("Service worker registered with scope:", registration.scope);
+      },
+      function (err) {
+        console.log("Service worker registration failed:", err);
+      }
+    );
+  });
+}
