@@ -34,7 +34,7 @@ readMoreButton.addEventListener("click", () => {
 //daftarkan service worker
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("/service-worker.js").then(
+    navigator.serviceWorker.register("./service-worker.js").then(
       function (registration) {
         console.log("Service worker registered with scope:", registration.scope);
       },
