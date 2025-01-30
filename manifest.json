@@ -3,7 +3,7 @@
     "short_name": "PPLG",
     "description": "Website yang menampilkan informasi mengenai program keahlian PPLG di SMKN 1 Katapang",
     "display": "standalone",
-    "start_url": "/index.html",
+    "start_url": "/",
     "orientation": "portrait",
     "icons": [
         {
